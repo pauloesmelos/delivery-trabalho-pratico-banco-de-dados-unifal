@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR" mlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="grupo1">
+        <meta name="description" content="trabalho prático banco de dados UNIFAL, sistema de delivery">
+        <meta name="keywords" content="sistema delivery, crud, banco de dados, spring boot">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema de Delivery - Produto</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/style-produto.css}">
+    </head>
+    <body>
+      <header>
+        <nav class="nav-menu">
+          <div class="logo">
+            <h2>Sistema de Delivery</h2>
+            <img src="motorbike.png" alt="logo">
+          </div>
+          <ul class="ul-menu">
+            <li><a href="#">Contato</a></li>
+            <li><a href="/">Pedidos</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Clientes</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+          <div class="titulo">
+              <h1>Produto</h1>
+              <img src="caixa-aberta.svg" height="30px" width="30px">
+          </div>
+          <div class="cad-pedido">
+              <div class="card-pedido">
+                  <h1>Cadastrar um <span class="destaque">produto</span></h1>
+                  <form class="form-cliente">
+                      <label for="descricao">Descricao</label>
+                      <input type="text" id="descricao" name="descricao" placeholder="">
+                      <label for="idProduto">Id Produto</label>
+                      <input type="text" id="idProduto" name="idProduto" placeholder="">
+                      <label for="preco">Preço R$</label>
+                      <input type="text" id="preco" name="preco" placeholder="">
+                  </form>
+                  <button class="cadastrar">Cadastrar</button>
+              </div>
+          </div>
+      </main>
+    </body>
+    <footer> &copy; 2023 - Todos os direitos reservados. Sistema de Delivery | <a target="_blank" href="https://github.com/pauloesmelos">Contato</a></footer>
+</html>
