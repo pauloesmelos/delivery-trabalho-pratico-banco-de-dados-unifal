@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public interface ProdutoRepository extends JpaRepository<Produto,Long> {
     List<Produto> findAll();
     Produto findById(long idProduto);

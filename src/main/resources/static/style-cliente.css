@@ -78,7 +78,7 @@
 .card-cliente{
     background-color: #fff;
     padding: 1rem;
-    width: 50%;
+    width: 80%;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -86,11 +86,25 @@
 }
 .card-cliente h1{
     margin-bottom: 1rem;
+    display: block;
 }
 .form-cliente label{
     display: block;
     font-weight: lighter;
     font-size: 1.1rem;
+}
+.form-endereco label{
+    display: block;
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+.form-endereco{
+    margin-left: 2rem;
+}
+.form-cliente{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 input[type="text"]{
     padding: .5rem 5rem;
@@ -122,13 +136,16 @@ input[type="date"]{
     background-color: hsl(140, 87%, 38%);
     cursor: pointer;
     border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 80%;
     display: block;
 }
 .cadastrar:hover{
     transform: scale(1.1);
     opacity: .7;
+}
+.div-button{
+    flex-basis: 100%;
+    margin-right: 44%;
 }
 h1{
     font-weight: lighter;
