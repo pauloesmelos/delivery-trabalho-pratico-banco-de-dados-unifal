@@ -1,9 +1,11 @@
 package com.delivery.models;
 
 import jakarta.persistence.*;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
+@Component
 @Entity
 @Table(name="Pedido")
 public class Pedido {

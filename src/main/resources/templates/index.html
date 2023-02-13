@@ -34,7 +34,7 @@
     <div class="cad-pedido">
         <div class="card-pedido">
             <h1>Cadastrar um <span class="destaque">pedido</span></h1>
-            <form class="form-cliente">
+            <form class="form-cliente" method="post" th:action="@{/add}">
                 <label for="cliente">Cliente</label>
                 <input type="text" id="cliente" name="cliente" placeholder="">
                 <label for="produto">Produto</label>
@@ -43,8 +43,8 @@
                 <input type="text" id="preco" name="preco" placeholder="">
                 <label for="data">Data</label>
                 <input type="date" id="data" name="data" placeholder="">
+                <button class="cadastrar" type="submit">Cadastrar</button>
             </form>
-            <button class="cadastrar">Cadastrar</button>
         </div>
     </div>
   </main>

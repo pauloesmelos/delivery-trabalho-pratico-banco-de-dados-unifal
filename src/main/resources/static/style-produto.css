@@ -122,7 +122,9 @@ input[type="date"]{
     background-color: hsl(140, 87%, 38%);
     cursor: pointer;
     border-radius: 5px;
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .cadastrar:hover{
     transform: scale(1.1);

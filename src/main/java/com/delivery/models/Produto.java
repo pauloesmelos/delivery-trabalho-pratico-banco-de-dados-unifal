@@ -1,6 +1,9 @@
 package com.delivery.models;
 
 import jakarta.persistence.*;
+import org.springframework.stereotype.Component;
+
+@Component
 @Entity
 @Table(name="Produto")
 public class Produto{
@@ -9,7 +12,9 @@ public class Produto{
     private Long idProduto;
     private String descricao;
     private double preco;
+    public Produto(){
 
+    }
     public String getDescricao(){
         return descricao;
     }

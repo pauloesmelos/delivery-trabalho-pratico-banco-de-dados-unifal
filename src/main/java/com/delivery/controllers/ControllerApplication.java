@@ -1,4 +1,4 @@
-package com.delivery.app.controllers;
+package com.delivery.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
