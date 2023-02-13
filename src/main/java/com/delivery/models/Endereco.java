@@ -1,7 +1,9 @@
 package com.delivery.models;
 
 import jakarta.persistence.*;
+import org.springframework.stereotype.Component;
 
+@Component
 @Entity
 @Table(name="endereco")
 public class Endereco {
@@ -13,8 +15,8 @@ public class Endereco {
     private String estado;
     private String cep;
 
-    @OneToOne(mappedBy = "endereco")
-    private Cliente cliente;
+    //@OneToOne(mappedBy = "endereco")
+    //private Cliente cliente;
     public Endereco(){
 
     }

@@ -11,20 +11,16 @@ import java.util.List;
 @Component
 @Entity
 @Table(name="Cliente")
-public class Cliente implements Serializable {
+public class Cliente{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//auto increment
     private Long idCliente;
     private String nome;
     private String email;
 
-//    @OneToMany(cascade = CascadeType.ALL)
-//    @JoinColumn(name="idTelefone",referencedColumnName = "idTelefone")
-//    private List<Telefone> telefones;
-
-    @OneToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name="idEndereco")
-    private Endereco endereco;
+   // @OneToOne(cascade = CascadeType.PERSIST)
+   // @JoinColumn(name="idEndereco")
+    //private Endereco endereco;
 
     public Cliente(){
         //telefones = new ArrayList<>();
@@ -52,20 +48,11 @@ public class Cliente implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+    //public Endereco getEndereco() {
+    //    return endereco;
+    //}
 
-    //public List<Telefone> getTelefones() {
-      //  return telefones;
+  //  public void setEndereco(Endereco endereco) {
+   //     this.endereco = endereco;
    // }
-
-    //public void setTelefones(List<Telefone> telefones) {
-    //    this.telefones = telefones;
-   // }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
 }

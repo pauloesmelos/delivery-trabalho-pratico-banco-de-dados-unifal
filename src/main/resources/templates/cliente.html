@@ -38,20 +38,24 @@
             <input type="text" id="nome" name="nome" placeholder="">
             <label for="email">Email</label>
             <input type="text" id="email" name="email" placeholder="">
-            <label for="telefonefixo">Telefone Fixo</label>
-            <input type="text" id="telefonefixo" name="telefonefixo" placeholder="">
-            <label for="telefonemovel">Telefone Móvel</label>
-            <input type="text" id="telefonemovel" name="telefonemovel" placeholder="">
+            <div class="form-telefone-2" method="post" th:action="@{/addTelefone}">
+              <label for="telefonefixo">Telefone Fixo</label>
+              <input type="text" id="telefonefixo" name="telefonefixo" placeholder="">
+              <label for="telefonemovel">Telefone Móvel</label>
+              <input type="text" id="telefonemovel" name="telefonemovel" placeholder="">
+            </div>
           </div>
           <div class="form-endereco">
-            <label for="rua">Rua</label>
-            <input type="text" id="rua" name="rua" placeholder="">
-            <label for="cidade">Cidade</label>
-            <input type="text" id="cidade" name="cidade" placeholder="">
-            <label for="estado">Estado</label>
-            <input type="text" id="estado" name="estado" placeholder="">
-            <label for="cep">CEP</label>
-            <input type="text" id="cep" name="cep" placeholder="">
+            <form class="form-endereco-2" method="post" th:action="@{/addEndereco}">
+              <label for="rua">Rua</label>
+              <input type="text" id="rua" name="rua" placeholder="">
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" name="cidade" placeholder="">
+              <label for="estado">Estado</label>
+              <input type="text" id="estado" name="estado" placeholder="">
+              <label for="cep">CEP</label>
+              <input type="text" id="cep" name="cep" placeholder="">
+            </form>
           </div>
           <div class="div-button">
             <button class="cadastrar" type="submit">Cadastrar</button>
