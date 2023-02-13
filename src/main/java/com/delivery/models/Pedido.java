@@ -15,6 +15,9 @@ public class Pedido {
     private String produto;
     private double preco;
     private LocalDate data;
+    public Pedido(){
+
+    }
     public Long getIdPedido() {
         return idPedido;
     }
