@@ -1,37 +1,51 @@
 package com.delivery.models;
 
 import jakarta.persistence.*;
-import org.springframework.stereotype.Component;
 
-@Component
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
-@Table(name="Telefone")
-public class Telefone{
-
+@Table(name="telefone")
+public class Telefone {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idTelefone;
-    private String telefonefixo;
-    private String telefonemovel;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//auto increment
+    private Long idtelefone;
 
-    public Telefone() {
+    private String numero;
+    private String codigo;
+
+    @OneToMany(mappedBy = "telefone",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private List<ClienteTelefone> clienteTelefoneList = new ArrayList<>();
+    public Telefone(String numero,String codigo){
+        this.numero = numero;
+        this.codigo = codigo;
+    }
+    public Telefone(){
 
     }
 
-    public String getTelefonefixo() {
-        return telefonefixo;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setTelefonefixo(String telefonefixo) {
-        this.telefonefixo = telefonefixo;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
-    public String getTelefonemovel() {
-        return telefonemovel;
+    public String getCodigo() {
+        return codigo;
     }
 
-    public void setTelefonemovel(String telefonemovel) {
-        this.telefonemovel = telefonemovel;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
+    public List<ClienteTelefone> getClienteTelefoneList() {
+        return clienteTelefoneList;
+    }
+
+    public void setClienteTelefoneList(List<ClienteTelefone> clienteTelefoneList) {
+        this.clienteTelefoneList = clienteTelefoneList;
+    }
 }

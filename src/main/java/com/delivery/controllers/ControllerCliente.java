@@ -1,10 +1,10 @@
 package com.delivery.controllers;
 
 import com.delivery.models.Cliente;
-import com.delivery.models.Pedido;
 import com.delivery.models.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ControllerCliente {
     @Autowired
     private ClienteRepository clienteRepository;
-    @GetMapping("/cliente")
-    public String cliente(Cliente cliente){
 
+    @GetMapping("/cliente")
+    public String cliente(){
         return "/cliente";
     }
     @PostMapping("/addCliente")
@@ -26,4 +26,5 @@ public class ControllerCliente {
         clienteRepository.save(cliente);
         return "redirect:/";
     }
+
 }

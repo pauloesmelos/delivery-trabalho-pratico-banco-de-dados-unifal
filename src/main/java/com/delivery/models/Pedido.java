@@ -15,6 +15,12 @@ public class Pedido {
     private String produto;
     private double preco;
     private LocalDate data;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="idcliente")
+    private Cliente cliente;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="idendereco")
+    private Endereco endereco;
     public Pedido(){
 
     }
@@ -48,6 +54,22 @@ public class Pedido {
 
     public void setData(LocalDate data) {
         this.data = data;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
 }

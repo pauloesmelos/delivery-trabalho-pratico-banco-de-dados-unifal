@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" mlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Sistema de Delivery - Cliente</title>
@@ -11,59 +12,63 @@
     <link rel="stylesheet" type="text/css" th:href="@{/style-cliente.css}">
 </head>
 <body>
-  <header>
+<header>
     <nav class="nav-menu">
-      <div class="logo">
-        <h2>Sistema de Delivery</h2>
-        <img src="motorbike.png" alt="logo">
-      </div>
-      <ul class="ul-menu">
-        <li><a href="https://github.com/pauloesmelos/spring-boot"target="_blank">Contato</a></li>
-        <li><a href="/">Pedidos</a></li>
-        <li><a href="/produto">Produtos</a></li>
-        <li><a href="#">Clientes</a></li>
-      </ul>
+        <div class="logo">
+            <h2>Sistema de Delivery</h2>
+            <img src="motorbike.png" alt="logo">
+        </div>
+        <ul class="ul-menu">
+            <li><a href="https://github.com/pauloesmelos/spring-boot"target="_blank">Contato</a></li>
+            <li><a href="/">Pedidos</a></li>
+            <li><a href="/produto">Produtos</a></li>
+            <li><a href="#">Clientes</a></li>
+        </ul>
     </nav>
-  </header>
-  <main>
+</header>
+<main>
     <div class="titulo">
-      <h1>Cliente</h1>
-      <img src="customer.png" height="30px" width="30px">
+        <h1>Cliente</h1>
+        <img src="customer.png" height="30px" width="30px">
     </div>
     <div class="cad-cliente">
-      <div class="card-cliente">
-        <form class="form-cliente" method="post" th:action="@{/addCliente}">
-          <div class="div-form-cliente">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="">
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="">
-            <div class="form-telefone-2" method="post" th:action="@{/addTelefone}">
-              <label for="telefonefixo">Telefone Fixo</label>
-              <input type="text" id="telefonefixo" name="telefonefixo" placeholder="">
-              <label for="telefonemovel">Telefone Móvel</label>
-              <input type="text" id="telefonemovel" name="telefonemovel" placeholder="">
-            </div>
-          </div>
-          <div class="form-endereco">
-            <form class="form-endereco-2" method="post" th:action="@{/addEndereco}">
-              <label for="rua">Rua</label>
-              <input type="text" id="rua" name="rua" placeholder="">
-              <label for="cidade">Cidade</label>
-              <input type="text" id="cidade" name="cidade" placeholder="">
-              <label for="estado">Estado</label>
-              <input type="text" id="estado" name="estado" placeholder="">
-              <label for="cep">CEP</label>
-              <input type="text" id="cep" name="cep" placeholder="">
+        <div class="card-cliente">
+            <form class="form-cliente" method="post" th:action="@{/addCliente}">
+                    <div class="display-flex">
+                        <div class="n1">
+                            <div class="cliente">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" placeholder="" name="nome">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" placeholder="" >
+                            </div>
+                            <div class="telefone">
+                                <label for="numero">Numero</label>
+                                <input type="text" id="numero" name="numero" placeholder="" >
+                                <label for="codigo">Codigo Região</label>
+                                <input type="text" id="codigo" name="codigo" placeholder="" >
+                            </div>
+                        </div>
+                        <div class="n2">
+                            <div class="form-endereco">
+                                <label for="rua">Rua</label>
+                                <input type="text" id="rua" name="rua" placeholder="">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="" >
+                                <label for="estado">Estado</label>
+                                <input type="text" id="estado" name="estado" placeholder="" >
+                                <label for="cep">CEP</label>
+                                <input type="text" id="cep" name="cep" placeholder="" >
+                            </div>
+                        </div>
+                    </div>
+                <div class="div-button">
+                    <button class="cadastrar" type="submit">Cadastrar</button>
+                </div>
             </form>
-          </div>
-          <div class="div-button">
-            <button class="cadastrar" type="submit">Cadastrar</button>
-          </div>
-        </form>
-      </div>
+        </div>
     </div>
-  </main>
+</main>
 </body>
 <footer> &copy; 2023 - Todos os direitos reservados. Sistema de Delivery | <a target="_blank" href="https://github.com/pauloesmelos">Contato</a></footer>
 </html>

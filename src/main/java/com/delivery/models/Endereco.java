@@ -9,23 +9,24 @@ import org.springframework.stereotype.Component;
 public class Endereco {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//auto increment
-    private Long idEndereco;
+    private Long idendereco;
     private String rua;
     private String cidade;
     private String estado;
     private String cep;
-
-    //@OneToOne(mappedBy = "endereco")
-    //private Cliente cliente;
-    public Endereco(){
-
+    public Endereco(Long idendereco,String rua,String cidade,String estado,String cep){
+        this.idendereco = idendereco;
+        this.rua = rua;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.cep = cep;
     }
-    public Long getIdEndereco() {
-        return idEndereco;
-    }
+    @OneToOne(mappedBy = "endereco",cascade = CascadeType.ALL)
+    private Cliente cliente;
+    @OneToOne(mappedBy = "endereco",cascade = CascadeType.ALL)
+    private Pedido pedido;
+    public Endereco() {
 
-    public void setIdEndereco(Long idEndereco) {
-        this.idEndereco = idEndereco;
     }
 
     public String getRua() {
@@ -59,4 +60,21 @@ public class Endereco {
     public void setCep(String cep) {
         this.cep = cep;
     }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
+    }
+
 }

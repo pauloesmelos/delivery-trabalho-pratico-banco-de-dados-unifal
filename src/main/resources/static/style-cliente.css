@@ -89,21 +89,25 @@
     display: block;
 }
 .form-cliente label{
-    display: block;
     font-weight: lighter;
     font-size: 1.1rem;
+    display: block;
 }
 .form-endereco label{
-    display: block;
     font-weight: lighter;
     font-size: 1.1rem;
+    display: block;
 }
-.form-endereco{
-    margin-left: 2rem;
+.n2{
+    margin: 0 0 0 2rem;
+    top: 0;
+    flex-basis: 50%;
 }
 .form-cliente{
+
+}
+.display-flex{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 input[type="text"]{
@@ -144,8 +148,7 @@ input[type="date"]{
     opacity: .7;
 }
 .div-button{
-    flex-basis: 100%;
-    margin-right: 44%;
+    margin-right: 50%;
 }
 h1{
     font-weight: lighter;
